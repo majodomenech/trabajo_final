@@ -16,6 +16,14 @@ creé el enviroment como juan explica acá: https://github.com/jipphysics/jupyte
 pude abrir el notebook en segundo plano (no se cierra si cierro terminal donde inicié el notebook): https://stackoverflow.com/questions/47331050/how-to-run-jupyter-notebook-in-the-background-no-need-to-keep-one-terminal-for
 hago tunneling en otra terminal, pongo el link en el navegador y tengo mi jupyter que queda andando aún si apago mi computadora local.
 
+### los enviroments que creé con micromamba
+
+jnb-env:  
+enviroment con python. Instalé Numpy, Matplotlib, Scipy
+
+
+
+
 ###para abrirlo cada vez
 
 ssh mjdomenech@durga blabla
