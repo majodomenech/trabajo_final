@@ -1,30 +1,15 @@
 ______________________________________________________________________________
-##############################################################################
-CONECTARME A DURGA (máquina)
-##############################################################################
+# CONECTARME A DURGA (máquina)
 
-##-DESDE LA PC-###################################################################
+## -DESDE LA PC
 abrir comand prompt de windows (o cualquier terminal):
 >ssh mjdomenech@durga.famaf.unc.edu.ar
+
 password: Ecooyighaew5eichioghoh2wequaek2e
 
 poniendo eso me conecto a Durga y veo un linux normal en mi carpeta de usuario home/mjdomenech
 
-###pasos que seguí para instalar
-instalé micromamba siguiendo lo de acá: https://waylonwalker.com/install-micromamba/
-creé el enviroment como juan explica acá: https://github.com/jipphysics/jupyter-ccad/blob/main/README.md (https://github.com/jipphysics/jupyter-ccad)
-pude abrir el notebook en segundo plano (no se cierra si cierro terminal donde inicié el notebook): https://stackoverflow.com/questions/47331050/how-to-run-jupyter-notebook-in-the-background-no-need-to-keep-one-terminal-for
-hago tunneling en otra terminal, pongo el link en el navegador y tengo mi jupyter que queda andando aún si apago mi computadora local.
-
-### los enviroments que creé con micromamba
-
-jnb-env:  
-enviroment con python. Instalé Numpy, Matplotlib, Scipy
-
-
-
-
-###para abrirlo cada vez
+### como abrir notebooks ya iniciados para usarlos
 
 ssh mjdomenech@durga blabla
 contraseña
@@ -33,7 +18,24 @@ jupyternotebook list
 copio el link que quiero, hago tunneling con el respectivo port en otra terminal y pego el link en mi navegador
 y listo
 
-##-DESDE LA TABLET-#################################################################
+### Los enviroments que creé con micromamba
+
+jnb-env:  
+enviroment con python. Instalé Numpy, Matplotlib, Scipy
+
+julia-env:
+enviroment con julia. Instalé julia, Pyplot
+
+
+### Pasos que seguí para instalar todo
+
+instalé micromamba siguiendo lo de acá: https://waylonwalker.com/install-micromamba/
+creé el enviroment como juan explica acá: https://github.com/jipphysics/jupyter-ccad/blob/main/README.md (https://github.com/jipphysics/jupyter-ccad)
+pude abrir el notebook en segundo plano (no se cierra si cierro terminal donde inicié el notebook): https://stackoverflow.com/questions/47331050/how-to-run-jupyter-notebook-in-the-background-no-need-to-keep-one-terminal-for
+hago tunneling en otra terminal, pongo el link en el navegador y tengo mi jupyter que queda andando aún si apago mi computadora local.
+
+
+## -DESDE LA TABLET
 -con terminus
 -con el otro programa
 
