@@ -9,6 +9,21 @@ Ecooyighaew5eichioghoh2wequaek2e
 
 poniendo eso me conecto a Durga y veo un linux normal en mi carpeta de usuario home/mjdomenech
 
+### como mandar un script para que corra en 2do plano
+
+>nohup python ~/TrabajoFinal/CorridaSistema_09_5000_10E6.py &
+>nohup julia ~/TrabajoFinal/CorridasJulia/CorridaSistema_09_100_10E6.jl &
+
+### instalar paquetes en enviroment
+
+>micromamba install -c conda-forge 'nombre-paquete'
+
+ 
+
+
+
+
+
 ### como abrir notebooks ya iniciados para usarlos
 
 ssh mjdomenech@durga blabla
