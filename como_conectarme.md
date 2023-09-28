@@ -92,8 +92,40 @@ ________________________________________________________
 --------------------------------------------------------
 CONECTARME CCAD (igual que durga creo)
 
-hacer:
--pedir usuario
+# como mandar a la cola scritps
+
+squeue -> comando para ver cola
+
+squeue --me -> trabajos que tengo yo en la cola
+
+
+los archivos .sh son lanzadores de bash, dicen las instrucciones para mandar los scripts a la cola del cluster. 
+
+Necesito el submit.sh y el script de julia o de python.
+
+nico siempre larga los trabajos en el home (de su usuario) por las dudas. Los trabajos se lanzan con:
+
+>sbatch submit.sh     (siempre tiene que ser .sh y tener esas instrucciones de cabecera)
+
+# como paralelizar en julia
+
+Threads.@threads for i in 1:100 ... 
+
+(parte del paquete base de julia, no hay que instalar nada)
+
+# cosas del submit.sh
+
+cuando mandas una tarea te dan un nodo, batch exclusive es que cuando agarras un nodo te queda para vos mientras lo uses. Cada nodo tiene 64 cores, entonces se pueden mandar 64 tareas diferentes
+el mail es para que te avise cuando termina.
+
+
+
+
+
+# distinguir clave privada de la publica
+
+id_rsa.pub -> publica
+id_rsa -> privada
 
 
 ________________________________________________________
