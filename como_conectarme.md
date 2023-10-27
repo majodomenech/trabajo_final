@@ -14,6 +14,14 @@ poniendo eso me conecto a Durga y veo un linux normal en mi carpeta de usuario h
 >nohup python ~/TrabajoFinal/CorridaSistema_09_5000_10E6.py &
 >nohup julia ~/TrabajoFinal/CorridasJulia/CorridaSistema_09_100_10E6.jl &
 
+los que más suelo mandar:
+
+corrida común
+>nohup julia ~/TrabajoFinal/CorridasJulia/CorridaSistema_0001_1000_10E6.jl &
+
+corrida JuliaParalelos
+>nohup julia ~/TrabajoFinal/CorridasJulia/CorridasParalelas/CorridaSistema_00001_10000_10E4_1.jl &
+
 ### instalar paquetes en enviroment
 
 >micromamba install -c conda-forge 'nombre-paquete'
