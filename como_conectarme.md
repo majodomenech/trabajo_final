@@ -32,11 +32,11 @@ corrida JuliaThreads
 
  
 
+### como abrir notebooks nuevos y ya iniciados para usarlos
 
-
-
-
-### como abrir notebooks ya iniciados para usarlos
+abrir uno nuevo:
+>micromamba activate jnb-env
+>jupyter notebook --no-browser & disown
 
 ssh mjdomenech@durga blabla
 contraseña
