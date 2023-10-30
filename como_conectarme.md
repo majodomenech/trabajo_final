@@ -36,8 +36,13 @@ corrida JuliaThreads
 
 abrir uno nuevo:
 >micromamba activate jnb-env
+>
 >jupyter notebook --no-browser & disown
+>
+>jupyter notebook list
 
+
+abrir uno que ya tengo abierto:
 ssh mjdomenech@durga blabla
 contraseña
 micromamba activate jnb-env
