@@ -12,10 +12,10 @@ En durga tengo 15 gb disponibles en la carpeta de usuario. Puedo ver cuánto ocu
 
 ejemplo de lo que devuelve:
 
-> (jnb-env) mjdomenech@durga:~$ du -h --max-depth=1 | sort -rh
-> 13G     .
-> 4,9G    ./micromamba
-> 3,8G    ./TrabajoFinal
+(jnb-env) mjdomenech@durga:~$ du -h --max-depth=1 | sort -rh
+13G     .
+4,9G    ./micromamba
+3,8G    ./TrabajoFinal
 > 3,3G    ./.julia
 > 501M    ./julia-1.9.1
 > 164M    ./.local
@@ -28,3 +28,10 @@ ejemplo de lo que devuelve:
 > 8,0K    ./.mamba
 > 8,0K    ./.conda
 > 4,0K    ./.ipynb_checkpoints
+
+
+para liberar espacio, como lo que más me ocupaba era /.micromamba, ejecuté
+
+> micromamba clean -all
+
+y se liberó bastante
