@@ -1,3 +1,9 @@
+## cerrar un notebook que está abierto
+
+> jupyter notebook stop 8888
+
+(poner el numerito que corresponde)
+
 ## pasar nombres de archivos
 
 dentro del directorio donde tengo todos los archivos, me creo uno con la lista de los nombres así
