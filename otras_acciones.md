@@ -1,3 +1,7 @@
+## instalar julia en carpeta de usuario (no en un enviroment)
+
+ver instrucciones de juan en: https://github.com/jipphysics/jupyter-ccad/blob/main/README.md
+
 ## cerrar un notebook que está abierto
 
 > jupyter notebook stop 8888
