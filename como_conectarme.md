@@ -91,22 +91,10 @@ Cambiá el pass por uno fuerte y/o usá https://www.strongdm.com/blog/ssh-passwo
 
 -htop se mira la carga (como uso esto?)
 
+______________________________________________________________________________
+# CONECTARME AL CCAD (cluster)
 
 
-________________________________________________________
---------------------------------------------------------
-CONECTARME A BANDURRIA (cluster)
-
-hacer:
--ver bien los archivos que me mando flor .sh
-
-________________________________________________________
---------------------------------------------------------
-usar visual studio para abrir ventanas y conectarme ssh desde su terminal
-
-
-________________________________________________________
---------------------------------------------------------
 CONECTARME CCAD (igual que durga creo)
 
 # como mandar a la cola scritps
@@ -143,6 +131,22 @@ el mail es para que te avise cuando termina.
 
 id_rsa.pub -> publica
 id_rsa -> privada
+
+
+________________________________________________________
+--------------------------------------------------------
+# CONECTARME A BANDURRIA (cluster)
+
+hacer:
+-ver bien los archivos que me mando flor .sh
+
+________________________________________________________
+--------------------------------------------------------
+usar visual studio para abrir ventanas y conectarme ssh desde su terminal
+
+
+________________________________________________________
+--------------------------------------------------------
 
 
 ________________________________________________________
