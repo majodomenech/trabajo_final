@@ -1,7 +1,11 @@
 sbatch: Para encolar un trabajo cuyo submit script es job.sh, luego de encolar el trabajo le devolverá un número que lo identifica.
 
-> sbatch job.sh
+> $sbatch job.sh
 > Submitted batch job 1234
+
+squeue: Muestra la cola de trabajos pendientes o en ejecución.
+
+> squeue --me
 
 
 ###################################
