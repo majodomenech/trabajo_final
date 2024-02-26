@@ -1,3 +1,5 @@
+## tutorial: https://ccad.readthedocs.io/empezar/slurm.html
+
 sbatch: Para encolar un trabajo cuyo submit script es job.sh, luego de encolar el trabajo le devolverá un número que lo identifica.
 
 > $sbatch job.sh
