@@ -1,3 +1,11 @@
+sbatch: Para encolar un trabajo cuyo submit script es job.sh, luego de encolar el trabajo le devolverá un número que lo identifica.
+
+> sbatch job.sh
+> Submitted batch job 1234
+
+
+###################################
+
 Marcos M. <marcos.mazzini@gmail.com>
 jue, 20 jul 2023, 9:40
 para mí
