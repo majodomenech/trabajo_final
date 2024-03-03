@@ -1,6 +1,8 @@
 ______________________________________________________________________________
 # CONECTARME A DURGA (máquina)
 
+pito
+
 ## -DESDE LA PC
 abrir comand prompt de windows (o cualquier terminal):
 >ssh mjdomenech@durga.famaf.unc.edu.ar
