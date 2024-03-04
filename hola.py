@@ -3,6 +3,7 @@
 print("Hola mundo")
 
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Definir la función q-Gaussiana
 def q_gaussian(x, A, q, beta):
