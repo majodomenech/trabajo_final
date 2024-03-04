@@ -1,19 +1,35 @@
 
-pwd = '/home/mjdomenech/TrabajoFinal/ArchivosDurga/Julia/JuliaThreads/febrero/deltas_00002_10E4.txt'
+import numpy as np
 
-archivo-names = np.loadtxt(pwd, dtype='str')
+#------------------ configuración ----------------
 
-print(archivo-names[99]) 
+# aca poner la ruta donde estan los archivo_names, destildar la correcta
+
+# pwd = '/home/mjdomenech/TrabajoFinal/ArchivosDurga/Julia/JuliaThreads/febrero/deltas_00002_10E4.txt'
+# pwd = 'C:\Users\mariajose\Desktop\archivos-para-ccad\simulaciones-Durga\simulaciones-BUENAS'
+pwd = '/home/mjdomenech/TrabajoFinal/ArchivosCCAD/JuliaThreads/marzo1/'
+
+archivo = 'deltas_00001_10E3.txt'
+#archivo = 'retornos_00001_10E3.txt'
+
+archivo_resultante = 'delta_00001_10000_concatenado1.txt'
+#archivo_resultante = 'retorno_00001_10000_concatenado1.txt'
+
+#------------------------------------------------
+
+archivo_names = np.loadtxt(pwd+archivo, dtype='str')
+
+print('ejemplo: ', archivo_names[99]) 
 
 arrays = []
 
 # Ruta base de los archivos
-base_path = '/home/mjdomenech/TrabajoFinal/ArchivosDurga/Julia/JuliaThreads/febrero/'
+base_path = pwd
 
 i=1
 
 # Iterar sobre los nombres de archivos en deltas_00001_10E4
-for filename in archivo-names:
+for filename in archivo_names:
     # Construir la ruta completa del archivo
     full_path = base_path + filename
     
@@ -31,4 +47,4 @@ result_array = np.concatenate(arrays)
 
 print('shape del array resultante:', np.shape(result_array))
 
-np.savetxt('/home/mjdomenech/TrabajoFinal/ArchivosDurga/Julia/JuliaThreads/febrero/Reconstruidos/delta_00002_5000_10E6.txt', result_array)
+np.savetxt(pwd+archivo_resultante, result_array)

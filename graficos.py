@@ -4,12 +4,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import stats
 
+#------------------ configuración ----------------
+
+# directorio donde están los datos
+
+pwd = 'C:/Users/mariajose/Desktop/archivos-para-ccad/simulaciones-Durga/simulaciones-BUENAS/'
+
+#-------------------------------------------------
 
 # Importar datos
-delta_09_10000_10E6 = np.loadtxt('/home/mjdomenech/TrabajoFinal/ArchivosDurga/Julia/JuliaThreads/febrero/Reconstruidos/delta_00009_10000_10E6.txt')
-delta_09_1000_10E6 = np.loadtxt('/home/mjdomenech/TrabajoFinal/ArchivosDurga/Julia/JuliaThreads/febrero/Reconstruidos/delta_00009_1000_10E6.txt')
-delta_09_100_10E6 = np.loadtxt('/home/mjdomenech/TrabajoFinal/ArchivosDurga/Julia/JuliaThreads/febrero/Reconstruidos/delta_00009_100_10E6.txt')
-delta_09_5000_10E6 = np.loadtxt('/home/mjdomenech/TrabajoFinal/ArchivosDurga/Julia/JuliaThreads/febrero/Reconstruidos/delta_00009_5000_10E6.txt')
+delta_09_10000_10E6 = np.loadtxt(pwd+'delta_09_10000_10E6.txt')
+delta_09_1000_10E6 = np.loadtxt(pwd+'delta_09_1000_10E6.txt')
+delta_09_100_10E6 = np.loadtxt(pwd+'delta_09_100_10E6.txt')
+delta_09_5000_10E6 = np.loadtxt(pwd+'delta_09_5000_10E6.txt')
 
 ###############################################################################
 ########################### GRAFICO PARA DELTAS
@@ -35,6 +42,11 @@ marker0 = 'D'
 marker1 = 's'
 marker2 = '^'
 marker3 = 'o'
+
+label0 = '$N = 10^4$'
+label1 = '$N = 2x10^3$'
+label2 = '$N = 10^3$'
+label3 = '$N = 10^2$'
 
 # Filtrar los valores mayores a lim_escala
 #data0 = data0[data0 <= lim_escala]
@@ -186,6 +198,6 @@ ax1.set_ylabel('$P(\lambda)/P(\lambda_{máx})$', fontsize = 18)
 ax1.legend(fontsize = 16)
 ax1.set_xlim(0.5, lim_escala)
 
-fig.show()
-
 #fig.savefig('/home/mjdomenech/TrabajoFinal/Figuras/OVERLEAF/resultados-febrero/1-deltas_09_norm-val-max.png')
+
+fig.show()
