@@ -5,15 +5,17 @@ import numpy as np
 
 # aca poner la ruta donde estan los archivo_names, destildar la correcta
 
-# pwd = '/home/mjdomenech/TrabajoFinal/ArchivosDurga/Julia/JuliaThreads/febrero/deltas_00002_10E4.txt'
-# pwd = 'C:\Users\mariajose\Desktop\archivos-para-ccad\simulaciones-Durga\simulaciones-BUENAS'
-pwd = '/home/mjdomenech/TrabajoFinal/ArchivosCCAD/JuliaThreads/marzo1/'
+#pwd = '/home/mjdomenech/TrabajoFinal/ArchivosDurga/Julia/JuliaThreads/febrero/deltas_00002_10E4.txt'
+pwd = 'C:\\Users\\mariajose\\Desktop\\archivos-para-ccad\\simulaciones-CCAD\\10E3marzo1\\'
 
-archivo = 'deltas_00001_10E3.txt'
-#archivo = 'retornos_00001_10E3.txt'
+#pwd = 'C:\Users\mariajose\Desktop\archivos-para-ccad\simulaciones-Durga\simulaciones-CCAD\10E3marzo1\'
+#pwd = '/home/mjdomenech/TrabajoFinal/ArchivosCCAD/JuliaThreads/marzo1/'
 
-archivo_resultante = 'delta_00001_10000_concatenado1.txt'
-#archivo_resultante = 'retorno_00001_10000_concatenado1.txt'
+#archivo = 'deltas_00001_10E3.txt'
+archivo = 'retornos_00001_10E3.txt'
+
+#archivo_resultante = 'delta_00001_10000_concatenado1.txt'
+archivo_resultante = 'retorno_00001_10000_concatenado1.txt'
 
 #------------------------------------------------
 

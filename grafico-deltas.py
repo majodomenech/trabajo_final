@@ -9,10 +9,24 @@ from scipy import stats
 pwd = 'C:/Users/mariajose/Desktop/archivos-para-ccad/simulaciones-Durga/simulaciones-BUENAS/'
 
 # Importar datos
-data0 = np.loadtxt(pwd+'delta_09_10000_10E6.txt')
-data1 = np.loadtxt(pwd+'delta_09_5000_10E6.txt')
-data2 = np.loadtxt(pwd+'delta_09_1000_10E6.txt')
-data3 = np.loadtxt(pwd+'delta_09_100_10E6.txt')
+#data0 = np.loadtxt(pwd+'09/delta_09_10000_10E6.txt') 
+#data1 = np.loadtxt(pwd+'09/delta_09_5000_10E6.txt')
+#data2 = np.loadtxt(pwd+'09/delta_09_1000_10E6.txt')
+#data3 = np.loadtxt(pwd+'09/delta_09_100_10E6.txt')
+
+data0 = np.loadtxt(pwd+'1N/delta_00001_10000_10E6_RECONSTRUIDO.txt') 
+data1 = np.loadtxt(pwd+'1N/delta_00002_5000_10E6_RECONSTRUIDO.txt')
+data2 = np.loadtxt(pwd+'1N/delta_0001_1000_10E6.txt')
+data3 = np.loadtxt(pwd+'1N/delta_001_100_10E6.txt')
+
+# Ruta para guardar graficos
+pwdgraf = 'C:/Users/mariajose/Desktop/graficos_tf/'
+save_fig = True
+nombre_archivo = 'deltas_1N_norm-val-max4'
+#nombre_archivo = 'deltas_1N_norm-val-max3'
+
+
+muest_aleat = False
 
 #-------------------------------------------------
 
@@ -24,20 +38,20 @@ data3 = np.loadtxt(pwd+'delta_09_100_10E6.txt')
 
 #-----------Parámetros para cada N-----------
 
-lim_escala= 500000
+lim_escala= 20000000
 
 color0 = 'gold'
-color1 = 'blue'
+color1 = 'dodgerblue'#'blue'
 color2 = 'lime'
-color3 = 'deeppink'
+color3 = 'magenta'#'deeppink'
 
 marker0 = 'D'
 marker1 = 's'
-marker2 = '^'
-marker3 = 'o'
+marker2 = 'o'
+marker3 = '^'
 
 label0 = '$N = 10^4$'
-label1 = '$N = 2x10^3$'
+label1 = '$N = 5x10^3$'
 label2 = '$N = 10^3$'
 label3 = '$N = 10^2$'
 
@@ -57,6 +71,27 @@ print(data2.shape)
 print(data3.shape)
 
 #---------------------------------
+
+def muestreo_aleatorio(data,num_puntos_submuestra):
+    
+    #Realiza el muestreo aleatorio
+    indices_submuestra = np.random.choice(len(data), size=num_puntos_submuestra, replace=False)
+    #Selecciona los puntos de la submuestra
+    data = data[indices_submuestra]
+    return data
+
+
+if muest_aleat == True:
+    data0 = muestreo_aleatorio(data0,1000000)
+    data1 = muestreo_aleatorio(data1,1000000)
+    data2 = muestreo_aleatorio(data2,1000000)
+    data3 = muestreo_aleatorio(data3,1000000)
+
+    print('luego del muestreo aleatorio')
+    print(data0.shape)
+    print(data1.shape)
+    print(data2.shape)
+    print(data3.shape)
 
 #NORMALIZADA AL VAL MAX
 fig = plt.figure(figsize = [7.4, 5.8],layout='tight' )
@@ -156,7 +191,7 @@ slope, intercept, r_value, p_value, std_err = stats.linregress(xfinal, yfinal)
 print("Pendiente:", slope)
 print("Intercept:", intercept)
 
-plt.plot(np.exp(xfinal), np.exp(-1.409*xfinal + intercept+1.5), color="black", label='Ajuste',linewidth=0.8)
+plt.plot(np.exp(xfinal), np.exp(-1.409*xfinal + intercept+1.5), color="black",linewidth=0.8)#label='Ajuste'
 #plt.plot(np.exp(xfinal), np.exp(-1.517*xfinal + intercept+1.5), color="red",linewidth=0.5)
 
 #================================================================================================
@@ -185,7 +220,7 @@ ax1.tick_params(labelbottom=True,labeltop=False)
 ax1.set_yscale('log')
 ax1.set_xscale('log')
 
-ax1.set_xlabel('$\lambda$ (tamaño de avalancha)',fontsize = 18)
+ax1.set_xlabel('$\lambda$',fontsize = 18)
 ax1.set_ylabel('$P(\lambda)/P(\lambda_{máx})$', fontsize = 18)
 
 #plt.xticks(fontsize = 15)
@@ -193,6 +228,10 @@ ax1.set_ylabel('$P(\lambda)/P(\lambda_{máx})$', fontsize = 18)
 ax1.legend(fontsize = 16)
 ax1.set_xlim(0.5, lim_escala)
 
-#fig.savefig('/home/mjdomenech/TrabajoFinal/Figuras/OVERLEAF/resultados-febrero/1-deltas_09_norm-val-max.png')
+
+if save_fig == True:
+    fig.savefig(pwdgraf+nombre_archivo+'.pdf', format='pdf')
+
+
 
 #fig.show()
