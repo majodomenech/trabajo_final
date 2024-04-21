@@ -5,9 +5,6 @@ pito
 
 ## -DESDE LA PC
 abrir comand prompt de windows (o cualquier terminal):
->ssh mjdomenech@durga.famaf.unc.edu.ar
-
-Ecooyighaew5eichioghoh2wequaek2e
 
 poniendo eso me conecto a Durga y veo un linux normal en mi carpeta de usuario home/mjdomenech
 
